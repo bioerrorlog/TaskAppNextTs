@@ -132,6 +132,8 @@ export default function Dashboard() {
   return (
     <div className={classes.root}>
       <CssBaseline />
+
+      {/* Header bar */}
       <AppBar position="absolute" className={clsx(classes.appBar, open && classes.appBarShift)}>
         <Toolbar className={classes.toolbar}>
           <IconButton
@@ -153,6 +155,9 @@ export default function Dashboard() {
           </IconButton>
         </Toolbar>
       </AppBar>
+      {/* Header bar END */}
+
+      {/* Side bar */}
       <Drawer
         variant="permanent"
         classes={{
@@ -170,28 +175,34 @@ export default function Dashboard() {
         <Divider />
         <List>{secondaryListItems}</List>
       </Drawer>
+      {/* Side bar END */}
+
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
           <Grid container spacing={3}>
+
             {/* Chart */}
             <Grid item xs={12} md={8} lg={9}>
               <Paper className={fixedHeightPaper}>
                 <Chart />
               </Paper>
             </Grid>
+
             {/* Recent Deposits */}
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
                 <Deposits />
               </Paper>
             </Grid>
+
             {/* Recent Orders */}
             <Grid item xs={12}>
               <Paper className={classes.paper}>
                 <Orders />
               </Paper>
             </Grid>
+            
           </Grid>
           <Box pt={4}>
             <Copyright />
