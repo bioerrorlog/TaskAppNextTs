@@ -27,8 +27,8 @@ function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+      <Link color="inherit" href="https://www.bioerrorlog.work/">
+        bioerrorlog.work
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -44,6 +44,7 @@ const useStyles = makeStyles((theme) => ({
   },
   toolbar: {
     paddingRight: 24, // keep right padding when drawer closed
+    background: '#006443',
   },
   toolbarIcon: {
     display: 'flex',
@@ -143,7 +144,7 @@ export default function Dashboard() {
             <MenuIcon />
           </IconButton>
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
-            Dashboard
+            ForesTask
           </Typography>
           <IconButton color="inherit">
             <Badge badgeContent={4} color="secondary">
