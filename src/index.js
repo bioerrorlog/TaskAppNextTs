@@ -1,28 +1,15 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { Provider } from "react-redux";
-import Store from "./store";
-import App from "./components/App";
-import "./index.css";
-import { createGlobalStyle } from "styled-components";
-import { PersistGate } from "redux-persist/integration/react";
-
-const { persistor, store } = Store();
-
-const GlobalStyle = createGlobalStyle`
-  html {
-    background-color: #20232a;
-    box-sizing: border-box;
-    transition: all 0.5s ease-in;
-  }
-`;
+import React from 'react';
+import ReactDOM from 'react-dom';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { ThemeProvider } from '@material-ui/core/styles';
+import App from './App';
+import theme from './theme';
 
 ReactDOM.render(
-  <Provider store={store}>
-    <PersistGate loading={null} persistor={persistor}>
-      <GlobalStyle />
-      <App />
-    </PersistGate>
-  </Provider>,
-  document.getElementById("root")
+  <ThemeProvider theme={theme}>
+    {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+    <CssBaseline />
+    <App />
+  </ThemeProvider>,
+  document.querySelector('#root'),
 );
