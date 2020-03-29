@@ -40,7 +40,7 @@ export const mainListItems = (
 export const secondaryListItems = (
   <div>
     <Link to="/profile" style={{ color: 'inherit', textDecoration: 'inherit' }}>
-    <ListItem button>
+      <ListItem button>
         <ListItemIcon>
           <PermIdentityIcon />
         </ListItemIcon>
