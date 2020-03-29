@@ -17,7 +17,6 @@ import Paper from '@material-ui/core/Paper';
 import Link from '@material-ui/core/Link';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import NotificationsIcon from '@material-ui/icons/Notifications';
 import { mainListItems, secondaryListItems } from './listItems';
 import Chart from './Chart';
 import Deposits from './Deposits';
@@ -44,7 +43,6 @@ const useStyles = makeStyles((theme) => ({
   },
   toolbar: {
     paddingRight: 24, // keep right padding when drawer closed
-    background: '#006443',
   },
   toolbarIcon: {
     display: 'flex',
@@ -148,11 +146,6 @@ export default function Dashboard() {
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
             ForesTask
           </Typography>
-          <IconButton color="inherit">
-            <Badge badgeContent={4} color="secondary">
-              <NotificationsIcon />
-            </Badge>
-          </IconButton>
         </Toolbar>
       </AppBar>
       {/* Header bar END */}
@@ -202,7 +195,7 @@ export default function Dashboard() {
                 <Orders />
               </Paper>
             </Grid>
-            
+
           </Grid>
           <Box pt={4}>
             <Copyright />
