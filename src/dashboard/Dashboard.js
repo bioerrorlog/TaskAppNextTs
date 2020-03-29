@@ -1,7 +1,8 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Test from './test/Test';
+import Tree from './tree/Tree';
 import Navbar from './navbar/Navbar';
 
 const useStyles = makeStyles((theme) => ({
@@ -25,9 +26,11 @@ export default function Dashboard() {
 
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
-        <Test />
-      {/* <Route exact path="/" component={Test} />
-      <Route path="/" component={Test} /> */}
+        <Switch>
+          <Route exact path="/" component={Tree} />
+          <Route path="/test" component={Test} />
+        </Switch>
+
       </main>
     
     </div>
