@@ -21,6 +21,12 @@ export const mainListItems = (
       </ListItemIcon>
       <ListItemText primary="Board" />
     </ListItem>
+    <ListItem button>
+      <ListItemIcon>
+        <AssignmentIcon />
+      </ListItemIcon>
+      <ListItemText primary="Test" />
+    </ListItem>
   </div>
 );
 
