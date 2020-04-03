@@ -13,10 +13,15 @@ const useStyles = makeStyles((theme) => ({
 class Tree extends Component {
 
   render(){
+    const listNodes = this.props.nodes;
+    const mapNodes = listNodes.map((node) =>
+      <p>{node}</p>
+    );
+
     return (
       <div>
           <h2>Tree</h2>
-          <p>{this.props.ctr}</p>
+          {mapNodes}
           <TreeButton onClick={this.props.addTreeNode}>Add</TreeButton>
       </div>
     );    
@@ -24,7 +29,7 @@ class Tree extends Component {
 }
 
 const mapStateToProps = state => ({
-  ctr: state.nodeCounter
+  nodes: state.nodes
 });
 
 const mapDispatchToProps = dispatch => {

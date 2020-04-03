@@ -1,16 +1,21 @@
 import { ACTIONS } from "../actions";
 
 const initialState = {
-    nodeCounter: 0
-}
+    nodes: [6, 2]
+};
 
 const treeReducer = (state = initialState, action) => {
     switch (action.type) {
         case ACTIONS.ADD_NODE: {
+            const newNodeId = action.payload;
+
+            // const newNode = {
+            //     nodeId: newNodeId
+            // }
             return {
-                ...state,
-                nodeCounter: state.nodeCounter + 1
-            }
+                ...state, 
+                nodes: [...state.nodes, newNodeId]
+            };
         }
     default:
         return state;
