@@ -25,7 +25,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function TreeNode({ children, description }) {
+export default function TreeNode({ title, description }) {
   const classes = useStyles();
   const bull = <span className={classes.bullet}>•</span>;
 
@@ -33,7 +33,7 @@ export default function TreeNode({ children, description }) {
     <Card className={classes.root}>
       <CardContent>
         <Typography className={classes.title} color="textSecondary" gutterBottom>
-            {children}
+            {title}
         </Typography>
         <Typography variant="h5" component="h2">
           {description}

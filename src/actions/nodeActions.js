@@ -3,9 +3,12 @@ import { ACTIONS } from '../actions';
 
 
 export const addNode = () => {
-    const newNodeId = uuid();
+    const id = uuid();
+    const parent = null;
+    const title = `this is title of ${id}`;
+    const description = `this is description of ${id}`;
     return{
         type: ACTIONS.ADD_NODE,
-        payload: newNodeId
+        payload: { id, parent, title, description }
     }; 
 };

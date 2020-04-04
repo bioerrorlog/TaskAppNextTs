@@ -16,7 +16,7 @@ class Tree extends Component {
   render(){
     const listNodes = this.props.nodes;
     const mapNodes = listNodes.map((node) =>
-      <TreeNode description='this is description'>{node}</TreeNode>
+      <TreeNode title={node.title} description={node.description}></TreeNode>
     );
 
     return (
