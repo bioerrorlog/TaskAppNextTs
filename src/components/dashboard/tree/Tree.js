@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { makeStyles } from '@material-ui/core/styles';
 
 import TreeButton from './TreeButton';
+import TreeNode from './TreeNode';
 import { addNode } from '../../../actions'
 
 
@@ -15,13 +16,13 @@ class Tree extends Component {
   render(){
     const listNodes = this.props.nodes;
     const mapNodes = listNodes.map((node) =>
-      <p>{node}</p>
+      <TreeNode description='this is description'>{node}</TreeNode>
     );
 
     return (
       <div>
           <h2>Tree</h2>
-          {mapNodes}
+            {mapNodes}
           <TreeButton onClick={this.props.addTreeNode}>Add</TreeButton>
       </div>
     );    

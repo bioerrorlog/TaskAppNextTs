@@ -1,7 +1,7 @@
 import { ACTIONS } from "../actions";
 
 const initialState = {
-    nodes: [6, 2]
+    nodes: []
 };
 
 const treeReducer = (state = initialState, action) => {
