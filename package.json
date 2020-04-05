@@ -11,12 +11,14 @@
   "dependencies": {
     "@material-ui/core": "latest",
     "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.48",
     "clsx": "latest",
     "react": "latest",
     "react-dom": "latest",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "latest",
+    "react-spring": "^8.0.27",
     "recharts": "^1.8.5",
     "redux": "^4.0.5",
     "uuidv4": "^6.0.7"

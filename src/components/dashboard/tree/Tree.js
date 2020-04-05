@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import TreeButton from './TreeButton';
 import TreeNode from './TreeNode';
+import TreeView from './TreeView';
 import { addNode } from '../../../actions'
 
 
@@ -30,6 +31,7 @@ class Tree extends Component {
           <h2>Tree</h2>
             {mapNodes}
           <TreeButton onClick={this.props.addTreeNode}>Add</TreeButton>
+          <TreeView />
       </div>
     );    
   }
