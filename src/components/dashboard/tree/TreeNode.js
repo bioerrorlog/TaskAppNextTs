@@ -8,20 +8,20 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 300,
+    maxWidth: 800,
     minWidth: 200,
     marginBottom: 12,
   },
   bullet: {
     display: 'inline-block',
-    margin: '0 2px',
+    // margin: '0 2px',
     transform: 'scale(0.8)',
   },
   title: {
-    fontSize: 14,
+    // fontSize: 14,
   },
   pos: {
-    marginBottom: 12,
+    // marginBottom: 12,
   },
 });
 
@@ -32,16 +32,13 @@ export default function TreeNode({ title, description }) {
   return (
     <Card className={classes.root}>
       <CardContent>
-        <Typography className={classes.title} color="textSecondary" gutterBottom>
+        <Typography className={classes.title} gutterBottom>
             {title}
         </Typography>
-        <Typography variant="h5" component="h2">
-          {description}
-        </Typography>
       </CardContent>
-      <CardActions>
+      {/* <CardActions>
         <Button size="small">Learn More</Button>
-      </CardActions>
+      </CardActions> */}
     </Card>
   );
 }

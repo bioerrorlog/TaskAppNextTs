@@ -13,11 +13,17 @@ const useStyles = makeStyles((theme) => ({
 
 class Tree extends Component {
 
-  render(){
-    const listNodes = this.props.nodes;
+  nodeMapping(listNodes){
     const mapNodes = listNodes.map((node) =>
-      <TreeNode title={node.title} description={node.description}></TreeNode>
+      <TreeNode title={node.title} description={node.description}>
+        {this.nodeMapping(node.nodes)}
+      </TreeNode>
     );
+    return mapNodes;
+  }
+
+  render(){
+    const mapNodes = this.nodeMapping(this.props.nodes);
 
     return (
       <div>
